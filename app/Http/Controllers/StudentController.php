@@ -18,7 +18,7 @@ class StudentController extends Controller
             $query->where('student_name', 'LIKE', "%{$search}%");
         }
 
-        $students = $query->paginate(10);
+        $students = $query->paginate(2);
 
         return view('students.index', compact('students'));
 
